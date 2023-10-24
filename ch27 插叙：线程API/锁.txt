@@ -1,0 +1,9 @@
+pthread_mutex_t lock 创建锁
+lock=PTHREAD_MUTEX_INITIALIZER 静态初始化锁
+pthread_mutex_init(&lock,NULL) 动态初始化锁
+pthread_mutex_destory() 用完之后释放锁
+pthread_mutex_lock(&lock) 加锁
+pthread_mutex_unlock(&lock) 解锁
+int pthread_mutex_trylock(pthread_mutex_t *mutex) 尝试获取锁
+int pthread_mutex_timedlock(pthread_mutex_t *mutex, 
+ struct timespec *abs_timeout) 尝试获取锁，超时返回
